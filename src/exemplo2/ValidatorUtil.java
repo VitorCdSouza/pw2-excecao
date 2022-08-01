@@ -46,7 +46,13 @@ public class ValidatorUtil {
 	}
 
 	public static void validarNome(String value) {
-		// TODO Implementar o método
+		char c;
+		for (int i = 0; i < value.length(); i++ ) {
+			c = value.charAt(i);
+			if(Character.isDigit(c)) {
+				throw new RuntimeException("Nome inválido");
+			}
+		}
+			
 	}
-
 }
